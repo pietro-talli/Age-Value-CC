@@ -1,0 +1,21 @@
+{
+    "mdp": {
+        "N_s": 30,
+        "N_a": 4,
+        "gamma": 0.9,
+        "r_seed": 1234,
+        "reward_decay": 0.1
+    },
+    "horizon": 100,
+    "t_max":100,
+    "runs_per_instance": 10,
+    "beta": {
+        "min": 0.0,
+        "max": 2.0,
+        "n": 21
+    },
+    "n_test_episodes": 100000,
+    "path": "./push_spread_reward_0/",
+    "name": "push_spread_reward_0",
+    "strategy": "push"
+}
