@@ -52,7 +52,7 @@ def create_randomized_mdps(N_states: int, N_actions: int, gamma: float, r_seed: 
                 new_link_set = [(random_idx + j) % N_states for j in range(-i, i+1)]
                 mdp_list[i].P[a][s] = np.zeros(N_states)
                 for idx in new_link_set:
-                    mdp_list[i].P[a][s][idx] = 1/len(new_link_set)
+                    mdp_list[i].P[a][s][idx] = 1/len(new_link_set) #0.5 - np.abs(idx)/len(new_link_set)
 
                 mdp_list[i].P[a,s,random_idx] += 0.1
                 mdp_list[i].P[a,s,:] /= np.sum(mdp_list[i].P[a,s,:])
